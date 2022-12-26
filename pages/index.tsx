@@ -1,26 +1,29 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Button, Container, Navbar, Text, Grid, Col, Link, Dropdown } from '@nextui-org/react'
+import {
+	Button,
+	Container,
+	Navbar,
+	Text,
+	Grid,
+	Col,
+	Link,
+	Dropdown,
+} from '@nextui-org/react'
 import { icons } from '../public/Icon.js'
 import InfoCard from '../components/InfoCard'
 
-
-
-
-
-
-
 export default function Home() {
-  const collapseItems = [
+	const collapseItems = [
 		'Discover',
-    'Create',
-    'Build',
+		'Create',
+		'Build',
 		'Login',
 		'Sign Up',
-    'Features'
-  ]
-  return (
+		'Features',
+	]
+	return (
 		<>
 			<Head>
 				<title>NextUI Landing Page</title>
@@ -169,7 +172,7 @@ export default function Home() {
 								weight={'thin'}
 								size={40}
 								css={{ textAlign: 'center' }}>
-								NextUI {' '}
+								NextUI{' '}
 							</Text>
 							<Button
 								size='sm'
@@ -211,7 +214,5 @@ export default function Home() {
 				</Grid.Container>
 			</Container>
 		</>
-  )
+	)
 }
-
-
