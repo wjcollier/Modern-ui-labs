@@ -1,6 +1,26 @@
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
+import { NextUIProvider, createTheme } from '@nextui-org/react'
+ import { SSRProvider } from '@react-aria/ssr'
+ 
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const darkTheme = createTheme({
+	type: 'dark'
+})
+
+
+
+ function App({ Component, pageProps }: AppProps) {
+  return (
+		<SSRProvider>
+			
+				<NextUIProvider theme={darkTheme}>
+					<Component {...pageProps} />
+				</NextUIProvider>
+			
+		</SSRProvider>
+  )
 }
+
+
+export default App
